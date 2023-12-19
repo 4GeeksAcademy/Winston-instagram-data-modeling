@@ -13,7 +13,7 @@ class Follower(Base):
 
     id = Column(Integer(), primary_key=True)
     user_from_id = Column(Integer, ForeignKey("user.id"),nullable=False)
-    user_to_id = Column(Integer, ForeignKey("user.id") ,nulable=False)
+    user_to_id = Column(Integer, ForeignKey("user.id") ,nullable=False)
     user_from = relationship("User", back_populates="follower")
     user_to = relationship("User", back_populates="follower")
 
